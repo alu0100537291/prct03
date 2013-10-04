@@ -1,0 +1,63 @@
+########### PRÁCTICA 3 ############
+# ALUMNO: José Alberto Pérez Melián
+# CORREO: alu0100537291@ull.edu.es
+# FECHA:  04/10/2013
+
+# PREGUNTA 18
+	Muestra por pantalla "Hola mundo"
+
+# PREGUNTA 21
+	'\t\n' muestra el contenido entre las comillas simples (realiza interpolación)
+	"\t\n" salto de línea (no realiza interpolación)
+
+#PREGUNTA 22
+	%q{hello world\n} cadena con comillas simples SIN interpolar
+		hello world\n
+	%q{'a' 'b' 'c'}   muestra la cadena "'a' 'b' 'c'"
+
+#PREGUNTA 23
+	%Q{hello world\n} cadena con comillas dobles CON interpolación
+		hello world
+
+	%Q{"a" "b" "c"}   imprime la cadena ""a" "b" "c""
+
+#PREGUNTA 24
+	"--4--\n--2--\n"
+
+#PREGUNTA 25
+	"--\#{a}--\n--\#{b}--\n" NO se interpola
+
+#PREGUNTA 26
+	s[0,2] -> "he"
+	s[-1,1] -> "o"
+	s[0,10] -> "hello"
+
+#PREGUNTA 27
+	Concatena los strings
+	Queda "hello world"	
+
+#PREGUNTA 28
+	Repite 3 veces "."
+	Queda "..."
+
+#PREGUNTA 29
+	La expresión de dentro se evalúa una sola vez y se repite 3 veces
+	Queda "2 2 2 "
+
+#PREGUNTA 30
+	Crea un vector con las palabras que forman la frase
+	["this", "is", "a", "test"]
+
+#PREGUNTA 31
+	Array de comillas dobles. Al ser comillas dobles se interpola
+	Se escriben dos líneas en blanco
+
+#PREGUNTA 32
+#PREGUNTA 33
+#PREGUNTA 34
+#PREGUNTA 35
+#PREGUNTA 36
+#PREGUNTA 37
+#PREGUNTA 38
+#PREGUNTA 39
+#PREGUNTA 40
