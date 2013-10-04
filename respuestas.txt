@@ -45,19 +45,137 @@
 	Queda "2 2 2 "
 
 #PREGUNTA 30
-	Crea un vector con las palabras que forman la frase
-	["this", "is", "a", "test"]
+	Separa las palabras
+		this
+		is
+		a
+		tweet
 
 #PREGUNTA 31
-	Array de comillas dobles. Al ser comillas dobles se interpola
-	Se escriben dos líneas en blanco
+	Separa las palabras y no interpola
+		\t
+		\n
 
 #PREGUNTA 32
+	Se separan las palabras y se interpola
+		Dos líneas en blanco
+
 #PREGUNTA 33
+	Array de tres casillas en blanco
+	Todas las casillas apuntan a 'nil'
+
 #PREGUNTA 34
+	Contiene un array de tres casillas inicializadas en 0
+	[0,0,0]
+
 #PREGUNTA 35
+	Crea en 'b' una copia de la matriz almacenada en 'x'
+
 #PREGUNTA 36
+	[0, 2, 4]	
+
 #PREGUNTA 37
+	a[1,1] = "b"
+	a[-2,2] = "d" "e"
+	a[0..2] = "a" "b" "c"
+	a[0...1] = "a"
+	a[-2..-1] = "d" "e"
+
 #PREGUNTA 38
+	a[0,2] = %w{A B} --> a = ["A", "B", "c", "d", "e"]. 
+    a[2..5] = %w{C D E} --> a = ["A", "B", "C", "D", "E"]. 
+    a[0,0] = [1,2,3] --> a = [1, 2, 3, "A", "B", "C", "D", "E"]. 
+    a[0,2] = [] --> a = [3, "A", "B", "C", "D", "E"].
+    a[-1,1] = [ ’Z’ ] --> a = [3, "A", "B", "C", "D", "Z"].
+    a[-2,2] = nil --> a = [3, "A", "B", "C"].
+
 #PREGUNTA 39
+	a = (1...4).to_a --> [1, 2, 3].
+    a = a + [4, 5] --> [1, 2, 3, 4, 5].
+    a += [[6, 7, 8]] --> [1, 2, 3, 4, 5, [6, 7, 8]].
+    a = a + 9 --> TypeError: can't convert Fixnum into Array.
+
 #PREGUNTA 40
+	x = %w{a b c b a} --> ["a", "b", "c", "b", "a"].
+    x = x - %w{b c d} --> ["a", "a"].
+
+#PREGUNTA 41
+	z = [0]*8 --> [0, 0, 0, 0, 0, 0, 0, 0].
+
+#PREGUNTA 42
+	a << 1 --> [1].
+    a << 2 << 3 --> [1, 2, 3].
+    a << [4, 5, 6] --> [1, 2, 3, [4, 5, 6]].
+    a.concat [7, 8] --> [1, 2, 3, [4, 5, 6], 7, 8].
+
+#PREGUNTA 43
+	c = a | b --> [1, 2, 3, 4, 5].
+    d = b | a --> [5, 4, 3, 2, 1].
+    e = a & b --> [2, 3, 4].
+    f = b & a --> [4, 3, 2].
+
+#PREGUNTA 44
+	a.to_a --> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].
+    b.to_a --> [1, 2, 3, 4, 5, 6, 7, 8, 9].
+    b.include? 10 --> false.
+    b.include? 8 --> true.
+    b.step(2) {|x| print "#{x} " } --> 1 3 5 7 9 => 1...10.
+    1..3.to_a --> ArgumentError: bad value for range.
+
+#PREGUNTA 45
+	r.member? 50 --> true.
+    r.include? 99.9 --> true.
+    r.member? 99.9 --> true.
+
+#PREGUNTA 46
+	true.class --> TrueClass.
+    false.class --> FalseClass.
+    puts "hello" if 0 --> hello
+			=> nil.
+    puts "hello" if nil --> => nil.
+    puts "hello" if "" --> hello
+			=> nil.
+
+#PREGUNTA 47
+	x.class --> Symbol.
+    x == ’sym’ --> false.
+    x == :sym --> true.
+    z.class --> Symbol.
+    x == ’sym’.to_sym --> true.
+    x.to_s == ’sym’ --> true.
+
+#PREGUNTA 48
+	print s --> Rub.
+    print s, t --> RubJava.
+
+#PREGUNTA 49
+	"%d %s" % [3, "rubies"] --> "3 rubies".
+
+
+#PREGUNTA 50
+	x, y = 4, 5 --> [4, 5].
+    z = x > y ? x : y --> 5.
+    x,y,z = [1,2,3] --> [1, 2, 3].
+
+#PREGUNTA 51
+	x.keys --> [:b, :a].
+    x.values --> [2, 1].
+    x --> {:b=>2, :c=>3, :a=>1}.
+    x --> {:b=>2, :c=>3, :a=>1}.
+    x --> {:b=>2, :c=>3}.
+    x.delete_if { |k,v| v % 2 == 0 } --> {:a=>1}.
+    x --> {:a=>1}.
+
+#PREGUNTA 52
+	Nada, porque no hemos declarado un bloque por el que sustiturirlo.
+
+#PREGUNTA 53
+	counts = Hash.new(0) --> {}. La diferencia es que en el primero creamos un hash con ning´un elemento,
+    y en el segundo creamos un bloque vac´io.
+
+#PREGUNTA 54
+	’hello world, hello LPP’.scan /\w+/ --> ["hello", "world", "hello", "LPP"].
+
+#PREGUNTA 55
+	c = { :a => 3, :b => 2, :c => 1 } --> 
+    c.keys.sort.each { |k| puts c[k] } --> No se puede responder porque la versi´on de Ruby es la 1.8.7.
